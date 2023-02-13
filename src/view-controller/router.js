@@ -1,7 +1,7 @@
 import { components } from "../views"
 
 const changeView = (route) => {
-    const loginSection = document.getElementById('loginSection')
+    const loginSection = document.getElementById('root')
     loginSection.innerHTML = '';
     switch (route) {
         case '#/login':
@@ -12,8 +12,8 @@ const changeView = (route) => {
             // console.log(loginSection);
             { return loginSection.appendChild(components.wall()) }
         default:
-            { return loginSection.appendChild(components.login()) }
-            // break
+            // { return loginSection.appendChild(components.login()) }
+            break
     }
     // console.log(loginSection);
     // console.log(route)
