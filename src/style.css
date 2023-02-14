@@ -5,7 +5,7 @@ padding: 0;
 }
 
 :root {
-/* azul: 023047, turqueza: 219ebc, naranja: fb8500, celeste: 8ecae6; amarillo:ffb703*/    
+/* azul: 023047, turqueza: 219ebc, naranja: fb8500, celeste: 8ecae6; amarillo:ffb703*/
  --theme-color: white;
  --primary-color: #023047;
  --secundary-color: #ffb703;
@@ -23,7 +23,7 @@ body {
 }
 
 .loginContainer {
-    background-image: url(Imagenes/Viajera.jpg);
+
     background-color: var(--background-view);
     width: 336px;
     height: 508px;
@@ -36,7 +36,9 @@ body {
     text-align: center;
     align-content: center;
 }
-.registerContainer {
+.container {
+    background-image: url(Imagenes/Viajera.jpg);
+
     padding-top: 35px;
     background-color: var(--background-view);
     width: 336px;
@@ -76,17 +78,35 @@ body {
 }
 
 .loginBtn {
-    color: var(--primary-color);
-}
 
-.controlBtn {
     height: 46px;
     width: 280px;
     background-color: var(--primary-color);
     color: #ffff;
     font-size: 16px;
-    
-    
+}
+
+.linkViewRegister {
+        display: block;
+        height: 46px;
+        width: 280px;
+        background-color: var(--background-color-buttons);
+        color: #ffff;
+        font-size: 16px;
+        border-radius: 10px;
+        /* padding: 5px 15px; */
+        padding-left: 14px;
+        margin-bottom: 8px;
+        margin-left: 28px;
+        margin-right: 28px;
+}
+.registerBtn {
+    height: 46px;
+    width: 280px;
+    background-color: var(--background-color-buttons);
+    color: #ffff;
+    font-size: 16px;
+
 }
 
 .text-center {

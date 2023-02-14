@@ -1,6 +1,7 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const auth = getAuth();
+
 signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 

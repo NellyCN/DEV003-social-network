@@ -1,30 +1,32 @@
+// import {}
 export default () => {
     const viewLogin = `
-    
-        <container class = "loginContainer" id= "loginContainer">
+    <div class = "container" id= "container">
             <figure class="logo">
-                <img class="logoTravellx" src="/Imagenes/titleLogoTravellx.png" alt="logoTravellx">
+              <img class="logoTravellx" src="/Imagenes/titleLogoTravellx.png" alt="logoTravellx">
             </figure>    
             <p class="wellcomeLogReg">Conéctate con viajeros, comparte experiencias, recomienda lugares a otros viajeros como tú</p>
-            <input class ="controls" type="text" name="email" value="" placeholder="Correo Electrónico">
-            <input class ="controls" type="password" name="contraseña" value="" placeholder="Contraseña">
-            <button class ="loginBtn" type="button" name="loginButton" value="INICIAR SESIÓN">
+            <input class ="controls" id="emailLogin" type="text" name="email" value="" placeholder="Correo Electrónico">
+            <input class ="controls" id="passLogin"type="password" name="password" value="" placeholder="Contraseña">
+            <input class="loginBtn" id ="loginBtn" type="button" value="INICIAR SESIÓN">
             <p class="loginText">O</p>
             <p class="loginText">¿AÚN NO TIENES UNA CUENTA?</p>
-            <input class ="loginBtn" type="submit" name="submit" value="REGÍSTRATE">
-            
-        </container>
-    
-    <section class = "portadaLogin" id= "portadaLogin">
-        <div >
-        
-        </div>
-    </section>`
-    ;
+            <a href ="#/register" class="linkViewRegister" id ="linkViewRegister" value="REGÍSTRATE">        
+    </div>
+   `;
 
-    const divElem = document.createElement('section');
-    divElem.innerHTML = viewLogin;
+    const sectionElement = document.createElement('section');
+    sectionElement.innerHTML = viewLogin;
+   
+    const loginBtn = sectionElement.querySelector('#loginBtn');
+    // const auth
+    loginBtn.addEventListener('click', () => {
+        // e.preventDefault()
 
-    return divElem;
+        // const email = loginBtn['emailLogin']
+        // const password = loginBtn['passLogin']
+        // signInWithEmailAndPassword(auth,...)
+        console.log('LOGUEAR');
+    })
+    return sectionElement;
 };
-
