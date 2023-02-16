@@ -1,7 +1,4 @@
 import { createUserEmail } from "../lib/firebase";
-//   console.log(auth);
-// const auth0 = getAuth();
-// console.log(auth0);
 
 export default () => {
     const viewRegister = `
@@ -25,9 +22,8 @@ export default () => {
     const registerAccount = sectionElem.querySelector('#registerBtn');
     registerAccount.addEventListener('click', () => {
         const emailUser = sectionElem.querySelector('#textEmail').value;
-        const passUser =sectionElem.querySelector('#passwordRegister').value;
-        createUserEmail(emailUser,passUser);
-    
+        const passwordUser =sectionElem.querySelector('#passwordRegister').value;
+        createUserEmail(emailUser,passwordUser);
     });    
-     return sectionElem;
+    return sectionElem;
 };

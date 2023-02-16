@@ -1,12 +1,20 @@
 export default () => {
     const viewWall = `
-    <h2 class="text-center">postea</h2>
-    <figure class="text-center">
-        <img class="image" src="" alt="Travellx">
-    </figure>`;
-
-    const divElem = document.createElement('div');
-    divElem.innerHTML = viewWall;
-
-    return divElem;
+        <header>
+            <figure class="logo">
+                <img class="logoTravellx" src="/Imagenes/titleLogoTravellx.png" alt="logoTravellx">
+            </figure>
+            <label class="userName">HOLA User1!</label>
+        
+            </header>
+      <div class = "wall" id= "wall">
+                  
+                 
+      </div>
+     `;
+  
+    const sectionElement = document.createElement('section'); //padre de viewLogin
+    sectionElement.innerHTML = viewWall;
+  
+    return sectionElement;
 };

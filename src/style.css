@@ -1,7 +1,7 @@
 * {
 margin: 0;
 padding: 0;
-/* box-sizing: border-box; */
+box-sizing: border-box;
 }
 
 :root {
@@ -38,11 +38,12 @@ body {
 }
 .container {
     background-image: url(Imagenes/Viajera.jpg);
-
+  
+    background-size: cover;
     padding-top: 35px;
     background-color: var(--background-view);
-    width: 336px;
-    height: 508px;
+    width: 360px;
+    height: 800px;
     margin: auto;
     margin-top: 30px;
     box-shadow: var(--background-view);
@@ -50,6 +51,7 @@ body {
     border: var(--primary-color);
     text-align: center;
     align-content: center;
+
 }
 .logoTravellx {
     padding-bottom: 5px;
@@ -66,7 +68,7 @@ body {
 
 .controls {
     /* border-color: #023047; */
-    /* border-radius: 5%; */
+    border-radius: 10px;
     height: 46px;
     width: 280px;
     margin: 0 auto;
@@ -118,4 +120,12 @@ body {
     max-width: 450px;
     /* margin: 0 auto; */
     padding: 30px;
+}
+
+p {
+    padding: 15px;
+}
+
+.userName {
+   text-align: right;
 }
