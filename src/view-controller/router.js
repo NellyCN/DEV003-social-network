@@ -1,22 +1,22 @@
-import { components } from "../views"
+import { components } from '../views';
 
 const changeView = (route) => {
-    const loginSection = document.getElementById('root')
-    loginSection.innerHTML = '';
-    switch (route) {
-        case '#/login':
-            { return loginSection.appendChild(components.login()) }
-        case '#/register':
-            { return loginSection.appendChild(components.register()) }
-        case '#/wall':
-            // console.log(loginSection);
-            { return loginSection.appendChild(components.wall()) }
-        default:
-            // { return loginSection.appendChild(components.login()) }
-            break
-    }
-    // console.log(loginSection);
-    // console.log(route)
-}
+	const divRoot = document.getElementById('root');
+	divRoot.innerHTML = '';
+	switch (route) {
+		case '#/login':
+			{ return divRoot.appendChild(components.login()) };
+		case '#/register':
+			{ return divRoot.appendChild(components.register()) };
+		case '#/wall':
+			// console.log(divRoot);
+			{ return divRoot.appendChild(components.wall()) };
+		default:
+			{ return divRoot.appendChild(components.login()) };
+			// break;
+	}
+	// console.log(divRoot);
+	// console.log(route)
+};
 
-export { changeView }
+export { changeView };

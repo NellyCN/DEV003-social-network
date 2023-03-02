@@ -1,0 +1,30 @@
+/* Versión Escritorio */
+@media (max-width: 1200px) {
+.container {
+    background-image: url(Imagenes/Viajera.jpg); 
+}
+
+    body {
+        background-color:aqua;
+    }
+}
+
+
+/* Versión Tableta */
+@media (min-width: 535px) and (max-width: 824px) {
+    body {
+        background-color: antiquewhite;
+    }
+}
+
+/* Versione Movil */
+@media (min-width: 200px) and (max-width: 534px) {
+    .container {
+        /* background-image: url(Imagenes/Viajera.jpg);
+        /* background-size: cover; */
+        /*width: 360px; */
+    }        
+    body {
+        background-color: aquamarine;
+    }
+}
