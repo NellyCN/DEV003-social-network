@@ -2,20 +2,25 @@ import { signInUserEP } from '../lib/firebase';
 
 export default () => {
   const viewLogin = `
+    <div class = "container">
     
-    <div class = "container" id= "container" data-testid="loginContainer">
-      <div class ="background">
-        <figure class="logo">
-          <img class="logoTravellx" src="/Imagenes/titleLogoTravellx.png" alt="logoTravellx">
-        </figure>    
-        <p class="wellcomeLogReg">Conéctate con viajeros, comparte experiencias, recomienda lugares a otros viajeros como tú</p>
-        <input class ="controls" id="emailLogin" type="email" name="email" value="" placeholder="Correo Electrónico">
-        <input class ="controls" id="passLogin"type="password" name="password" value="" placeholder="Contraseña">
-        <input class="loginBtn" id ="loginBtn" type="submit" value="INICIAR SESIÓN">
-        <p class="loginText">O</p>
-        <p class="loginText">¿AÚN NO TIENES UNA CUENTA?</p>
-        <a href ="#/register" class="linkViewRegister">REGÍSTRATE</a>   
-      </div>
+        <div class = "containerPic" data-testid="loginContainer">
+        </div>
+
+        <div class = "containerBackground">
+            <div class ="background">
+              <figure class="logo">
+                  <img class="logoTravellx" src="/Imagenes/titleLogoTravellx.png" alt="logoTravellx">
+              </figure>    
+              <p class="wellcomeLogReg">Conéctate con viajeros, comparte experiencias, recomienda lugares a otros viajeros como tú</p>
+              <input class ="controls" id="emailLogin" type="email" name="email" value="" placeholder="Correo Electrónico">
+              <input class ="controls" id="passLogin"type="password" name="password" value="" placeholder="Contraseña">
+              <input class="loginBtn" id ="loginBtn" type="submit" value="INICIAR SESIÓN">
+              <p class="loginText">O</p>
+              <p class="loginText">¿AÚN NO TIENES UNA CUENTA?</p>
+              <a href ="#/register" class="linkViewRegister">REGÍSTRATE</a>   
+            </div>
+        </div>
     </div>
    `;
 

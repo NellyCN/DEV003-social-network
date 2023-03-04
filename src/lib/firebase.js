@@ -1,10 +1,8 @@
 // REGISTRAR NUEVOS USUARIOS
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { getDocs } from 'firebase/firestore';
+import { getDocs, collection, addDoc, query, onSnapshot } from 'firebase/firestore';
 // import { setupPosts } from '../views/muro';
 import { auth, db } from './configfirebase'; //db
-import { collection, addDoc } from 'firebase/firestore';
-import { query, onSnapshot } from "firebase/firestore";
 // import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"
 
 // CREA UN USUARIO NUEVO CON EMAIL Y PASSWORD
