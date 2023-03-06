@@ -1,4 +1,4 @@
-* {
+*, html {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -127,7 +127,7 @@ p {
 .backgroundMuro {
     background-color: var(--theme-color);
     width: 100%;
-    margin: auto;
+    /* margin: auto; */
     border-left-color: #8ecae6;
     border-right-color: #8ecae6;
 
@@ -155,6 +155,20 @@ p {
 background: var(--background-color-buttons-hover);
 }
 
+.userName {
+    display: flex;
+    font-size: 0.9em;
+    margin-left: 12px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border-color: var(--background-color-buttons-hover);
+    /* overflow: hidden; */
+    /* outline: none; */
+    /* -webkit-box-shadow: none; */
+    /* -moz-box-shadow: none; */
+    box-shadow: none;
+}
+
 .userWellcome {
     display: flex;
     justify-content: flex-end;
@@ -167,7 +181,7 @@ background: var(--background-color-buttons-hover);
     border: none;
     
     padding: 2px;
-    font-size: 12px;
+    font-size: 0.95em;
     color: var(--primary-color);
 }
 
@@ -179,9 +193,9 @@ background: var(--background-color-buttons-hover);
 
 .newPost {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     background-color: var(--theme-color);
-    margin: 25px 5px 10px 5px;
+    margin: 5px 50px 10px 50px;
     padding-bottom: 10px;
     padding-right: 10px;
     border-color: var(--background-view);
@@ -193,11 +207,11 @@ background: var(--background-color-buttons-hover);
 .textPost {
     border-radius: 5px;
     height: 83px;
-    width: 100%;
-    /* margin: 0 auto; */
-    margin: 12px 70px 70px 120px;
+    width: 98%;
+    font-size: 1.0em;
+    margin: 12px 24px 70px 12px;
     border-color: var(--background-color-buttons-hover);
-    padding: 10px 0px 10px 10px;
+    padding: 10px 10px 10px 10px;
     overflow: hidden;
     outline: none;
     -webkit-box-shadow: none;
@@ -206,12 +220,18 @@ background: var(--background-color-buttons-hover);
     resize: none; /*remove the resize handle on the bottom right*/
 }
 
+.btnpost{
+    display: flex;
+    justify-content: right;
+}
+
 .postBtn {
     height: 29.49px;
-    width: 65px;
+    width: 85px;
     background-color: var(--background-color-buttons-hover);
     color: var(--text-color);
-    font-size: 0.5em;
+    font-size: 0.75em;
+    font-weight: bold;
     text-align: center;
     justify-content: center;
     line-height: normal;
@@ -224,7 +244,8 @@ background: var(--background-color-buttons-hover);
     
 }
 .postBtn:hover {
-background: var(--background-view);
+background: var(--background-color-buttons);
+color: var(--primary-color);
 }
 
 .buttonsEdit {
@@ -232,12 +253,12 @@ background: var(--background-view);
     justify-content: space-around;
 }
 
-.editBtn {
+.editBtn, .idCancelBtn, .idDeleteBtn {
     height: 29.49px;
-    width: 56.5px;
+    width: 70px;
     background-color: var(--background-color-buttons-hover);
     color: var(--theme-color);
-    font-size: 0.5em;
+    font-size: 0.65em;
     text-align: center;
     justify-content: center;
     line-height: normal;
@@ -250,7 +271,7 @@ background: var(--background-view);
     
     
 }
-.editBtn:hover {
+.editBtn:hover, .idCancelBtn:hover, .idDeleteBtn:hover {
 background: var(--primary-color);
 }
 
@@ -266,7 +287,7 @@ background: var(--primary-color);
 .templatePost {
     /* display: flex; */
     background-color: var(--theme-color);
-    margin: 5px 5px 10px 5px;
+    margin: 5px 30px 10px 30px;
     padding: 10px;
     border-color: var(--background-view);
     border-top: #219ebc;
@@ -274,6 +295,11 @@ background: var(--primary-color);
     border-bottom: #219ebc;
     border-bottom-style: solid;
     border-width: thin;
+}
+
+.wallTemplate {
+    /* display: flex; */
+    align-content: center;
 }
 
 h3 {
@@ -293,5 +319,5 @@ h3 {
     -moz-box-shadow: none;
     box-shadow: none;
     color: var(--primary-color);
-    font-size: 0.75em;
+    font-size: 0.95em;
 }
