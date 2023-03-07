@@ -1,0 +1,115 @@
+/* MÓVIL VERSION */
+@media screen and (min-width: 480px) {
+    .container {
+        margin: 70px 0px;
+        width: 100%;
+
+        background-image: url(Imagenes/Viajera.jpg);
+        background-size: cover;
+        /* display: flex; */
+        /* justify-content: center;
+        align-content: center; */
+        
+    }
+
+    .containerBackground {
+         /* vertical-align: middle; */
+        /* vertical-align: middle; */
+        border-left: 2px var(--secundary-color);
+        /* justify-content: center; */
+        /* align-content: center; */
+        /* display: inline-block; */
+    }
+
+    .background {
+        width: 50%;
+        height: 508px;
+        vertical-align: middle;
+        background-color: var(--theme-color);
+        padding: 16px;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        text-align: center;
+        border-style: outset;
+        /* justify-content: center;
+        align-content: center; */
+       
+    }
+}
+
+/* TABLET VERSION */
+@media screen and (min-width: 767px) {
+    .container {
+        margin: 70px 20px;
+        display: flex;
+        flex-direction: row;
+        background-image: none;
+    }
+
+    .containerBackground {
+        margin: 10px 0px 10px 0px;
+        width: 50%;
+        height: 50%;
+        justify-content: center;
+        padding: 5px;
+        border-left: 2px var(--secundary-color);
+        border-left-style: groove;
+    }
+
+    .background {
+        background-color: var(--theme-color);
+        width: 336px;
+        padding-top: 15px;
+        padding-bottom: 40px;
+        text-align: center;
+        border-style: outset;
+    }
+
+    .containerPic {
+        background-image: url(Imagenes/Viajera.jpg);
+        background-size: cover;
+        width: 50%;
+        margin: 0 0px 0 0px;
+    }
+}
+
+/* DESKTOP VERSION */
+@media screen and (min-width: 950px) {
+    .container {
+        margin: 70px;
+        display: flex;
+        flex-direction: row;
+        background-image: none;
+    }
+
+    .containerBackground {
+        margin: 10px 80px 10px 80px;
+        width: 50%;
+        height: 50%;
+        justify-content: center;
+        padding: 5px;
+        border-left: 2px var(--secundary-color);
+        border-left-style: groove;
+    }
+
+    .background {
+        background-color: var(--theme-color);
+        width: 336px;
+        margin: auto;
+        padding-top: 15px;
+        padding-bottom: 40px;
+        text-align: center;
+        border-style: outset;
+        /* backdrop-filter: opacity(50%); */
+        /* backdrop-filter: blur(6.7px); */
+        /* -webkit-backdrop-filter: blur(6.7px); */
+    }
+
+    .containerPic {
+        background-image: url(Imagenes/Viajera.jpg);
+        background-size: cover;
+        width: 30%;
+        margin: 0 150px 0 150px;
+
+    }
+}
