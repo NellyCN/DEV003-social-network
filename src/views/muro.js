@@ -1,7 +1,9 @@
-import { createPost, getPostsOnSnapShot, logout, deletePost } from '../lib/firebase'
+import { createPost, getPostsOnSnapShot, logout, getPost, deletePost, updatePost } from '../lib/firebase'
 
 export default () => {
     const sectionElement = document.createElement('section');
+    let editStatus = false;
+    let id= '';
     sectionElement.classList.add('backgroundMuro');
     sectionElement.innerHTML = `
         <header>
@@ -18,7 +20,7 @@ export default () => {
                             <label class="userName">HOLA,</label>
                             <p class ="userEmailWellcome" type="text"></p> 
                 </div>
-                <form class="createPost" id="createPost">
+                <form class="createPost" id="idcreatePost">
                     <input type="hidden" id="post-id" value="">
                     <div class="newPost" id="newPost">
                         <input type="text" class="userName" id="iduserName" placeholder="User Name">
@@ -52,9 +54,9 @@ export default () => {
                     <p class="createdPost" id="idcreatedPost" type="text">${dataPost.comment}</p>
                 </div>
                 <div class="buttonsEdit">
-                    <button type="button" class="editBtn" id ="ideditBtn">EDITAR</button>
-                    <button type="button" class="idCancelBtn" id ="idCancelBtn">CANCELAR</button>
-                    <button type="button" class="idDeleteBtn" id ="idDeleteBtn" data-id="${post.id}">ELIMINAR</button>
+                    <button type="button" class="editBtn" id="ideditBtn" data-id="${post.id}">EDITAR</button>
+                    <button type="button" class="cancelBtn" id="idCancelBtn" data-id="${post.id}">CANCELAR</button>
+                    <button type="button" class="deleteBtn" id="idDeleteBtn" data-id="${post.id}">ELIMINAR</button>
                 </div>
             </div>    
         `;
@@ -68,11 +70,54 @@ export default () => {
             const userNamePost = sectionElement.querySelector('#iduserName').value;
             const postMessage = sectionElement.querySelector('#idtextPost').value;
             // console.log(postMessage);
-            createPost(userNamePost, postMessage);
-            sectionElement.querySelector('#createPost').reset();
+            
+            if (editStatus == false ) {
+                createPost(userNamePost, postMessage);
+                // console.log(editStatus);
+            } else {
+                updatePost(id, {user: userNamePost, comment: postMessage});
+                editStatus = false;
+                id=''
+                // sectionElement.ideditBtn. ='Actualizar';
+                sectionElement.querySelector('#ideditBtn').setAttribute('Publicar', 'Actualizar');
+            }
+            sectionElement.querySelector('#idcreatePost').reset();
         });
 
-        const deleteBtn = showPostCreated.querySelectorAll('.idDeleteBtn');
+        // **** EDITAR POST ****
+        const editBtn = showPostCreated.querySelectorAll('.editBtn');
+
+        editBtn.forEach((editClick) => {
+            editClick.addEventListener('click', async (e) => {  // Del Objeto event, extraemos informacion del botón. lo reemplazamos por las props a extraer de "target", extraemos con llaves
+                const doc = await getPost(e.target.dataset.id);
+                const post = doc.data();
+                sectionElement.querySelector('#iduserName').value = post.user;
+                sectionElement.querySelector('#idtextPost').value = post.comment;
+                // console.log(doc.data());
+                // console.log('editando');
+                // console.log(dataset.id); // usar "data-id" como atributo del botón para extraer el id directamente
+                // console.log(event.target.dataset.id);
+                editStatus = true;
+                id = doc.id;
+                
+                // sectionElement.editBtn.innerHTML = '';
+            });
+        });
+
+        // **** CANCEL POST ****
+        const cancelBtn = showPostCreated.querySelectorAll('.cancelBtn');
+
+        cancelBtn.forEach((cancelClick) => {
+            cancelClick.addEventListener('click', () => {  // Del Objeto event, extraemos informacion del botón. lo reemplazamos por las props a extraer de "target", extraemos con llaves
+                console.log('cancel');
+                // console.log(dataset.id); // usar "data-id" como atributo del botón para extraer el id directamente
+                // console.log(event.target.attributes.dataid.value);
+
+            });
+        });
+
+        // **** BORRAR POST ****
+        const deleteBtn = showPostCreated.querySelectorAll('.deleteBtn');
         // console.log('deletePost', deleteBtn);
 
         deleteBtn.forEach((deleteClick) => {

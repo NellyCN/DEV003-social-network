@@ -253,7 +253,7 @@ color: var(--primary-color);
     justify-content: space-around;
 }
 
-.editBtn, .idCancelBtn, .idDeleteBtn {
+.editBtn, .cancelBtn, .deleteBtn {
     height: 29.49px;
     width: 70px;
     background-color: var(--background-color-buttons-hover);
@@ -271,7 +271,7 @@ color: var(--primary-color);
     
     
 }
-.editBtn:hover, .idCancelBtn:hover, .idDeleteBtn:hover {
+.editBtn:hover, .cancelBtn:hover, .deleteBtn:hover {
 background: var(--primary-color);
 }
 
