@@ -20,6 +20,8 @@ font-family: Helvetica;
 body {
     background-color: var(--theme-color);
     color: var(--primary-color);
+    /* display: flex;
+    align-items: center; */
 }
 
 .logoTravellx {
@@ -155,17 +157,14 @@ p {
 background: var(--background-color-buttons-hover);
 }
 
-.userName {
-    display: flex;
+.userName{
+    width: 100%;
+    height: 25px;
     font-size: 0.9em;
-    margin-left: 12px;
+    margin: 0.8em;
     padding-left: 10px;
     border-radius: 5px;
     border-color: var(--background-color-buttons-hover);
-    /* overflow: hidden; */
-    /* outline: none; */
-    /* -webkit-box-shadow: none; */
-    /* -moz-box-shadow: none; */
     box-shadow: none;
 }
 
@@ -191,6 +190,17 @@ background: var(--background-color-buttons-hover);
     height: 40x;
 }
 
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .newPost {
     display: flex;
     flex-direction: column;
@@ -207,9 +217,9 @@ background: var(--background-color-buttons-hover);
 .textPost {
     border-radius: 5px;
     height: 83px;
-    width: 98%;
+    /* width: 98%; */
     font-size: 1.0em;
-    margin: 12px 24px 70px 12px;
+    margin: 1.0rem;
     border-color: var(--background-color-buttons-hover);
     padding: 10px 10px 10px 10px;
     overflow: hidden;
@@ -253,7 +263,7 @@ color: var(--primary-color);
     justify-content: space-around;
 }
 
-.editBtn, .idCancelBtn, .idDeleteBtn {
+.editBtn, .cancelBtn, .deleteBtn {
     height: 29.49px;
     width: 70px;
     background-color: var(--background-color-buttons-hover);
@@ -271,7 +281,7 @@ color: var(--primary-color);
     
     
 }
-.editBtn:hover, .idCancelBtn:hover, .idDeleteBtn:hover {
+.editBtn:hover, .cancelBtn:hover, .deleteBtn:hover {
 background: var(--primary-color);
 }
 
