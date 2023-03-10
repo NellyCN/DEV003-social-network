@@ -1,16 +1,19 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
 import { collection, addDoc, getDoc, query, onSnapshot, orderBy, deleteDoc, doc, updateDoc} from 'firebase/firestore';
 import { auth, db } from './configfirebase'; 
 
 // **** CREA UN USUARIO NUEVO CON EMAIL Y PASSWORD ****
 
-export const createUserEmail = (email, password) => {
+export const createUserEmail = (userName, email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
+    
         .then((userCredential) => {
             // Signed in 
-            const user = userCredential.user;
-            // ...
-            console.log(user);
+            const user = userCredential.user; // Una vez existe el usuario, puedo actualizar su información
+            updateProfile(auth.currentUser, {
+                displayName: userName
+            });
+            console.log('usuario', user);
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -25,14 +28,18 @@ export const signInUserEP = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
 };
 
+// crear funcion nombre usuario
+// export const userNameWall = auth.currentUser.displayName;
+
 // **** CREAR POST EN FIRESTORE DESDE EL TEMPLATE ****
 
-export const createPost = async (email, user, comment) => {
+export const createPost = async ( user, comment) => {
+    console.log(auth.currentUser.displayName);
     // Add a new document with a generated id.
     const documentReference = await addDoc(collection(db, "posts"), {
         // userID: auth.currentUser.uid,
-        email,
-        user,
+        // email,
+        user: auth.currentUser.displayName ? auth.currentUser.displayName : user,
         date: new Date().getDate() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getFullYear(),
         comment,
     });

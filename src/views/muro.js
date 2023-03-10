@@ -4,10 +4,10 @@ export default () => {
     const sectionElement = document.createElement('section');
     let editStatus = false;
     let id= '';
-    sectionElement.classList.add('backgroundMuro');
+    sectionElement.classList.add('backgroundMuro');  // Asignamos clase al section
     sectionElement.innerHTML = `
         <header>
-            <div class="headerWall"
+             <div class="headerWall"
                 <figure>
                     <img class="logoTravellxWall" src="/Imagenes/titleLogoTravellx.png" alt="logoTravellx">
                 </figure>
@@ -66,20 +66,22 @@ export default () => {
         // **** CREAR POST ****
         const crearPost = sectionElement.querySelector('#idCreateBtn');
         // console.log (crearPost);
-        crearPost.addEventListener("click", () => {
+        crearPost.addEventListener("click", (e) => {
+            e.preventDefault(); 
             const userNamePost = sectionElement.querySelector('#iduserName').value;
             const postMessage = sectionElement.querySelector('#idtextPost').value;
             // console.log(postMessage);
             
             if (editStatus == false ) {
                 createPost(userNamePost, postMessage);
+                
                 // console.log(editStatus);
             } else {
                 updatePost(id, {user: userNamePost, comment: postMessage});
                 editStatus = false;
                 id=''
                 // sectionElement.ideditBtn. ='Actualizar';
-                sectionElement.querySelector('#ideditBtn').setAttribute('Publicar', 'Actualizar');
+                // sectionElement.querySelector('#ideditBtn').setAttribute('Publicar', 'Actualizar');
             }
             sectionElement.querySelector('#idcreatePost').reset();
         });
@@ -99,7 +101,7 @@ export default () => {
                 // console.log(event.target.dataset.id);
                 editStatus = true;
                 id = doc.id;
-                
+                // post.user.focus();
                 // sectionElement.editBtn.innerHTML = '';
             });
         });
@@ -121,7 +123,7 @@ export default () => {
         // console.log('deletePost', deleteBtn);
 
         deleteBtn.forEach((deleteClick) => {
-            deleteClick.addEventListener('click', ({ target: { dataset } }) => {  // Del Objeto event, extraemos informacion del botón. lo reemplazamos por las props a extraer de "target", extraemos con llaves
+            deleteClick.addEventListener('click', ({ target: { dataset } }) => {  // Del Objeto event, extraemos propiedad (objeto "target") del objeto, extraemos con llaves
                 // console.log('borrando');
                 // console.log(dataset.id); // usar "data-id" como atributo del botón para extraer el id directamente
                 // console.log(event.target.attributes.dataid.value);
