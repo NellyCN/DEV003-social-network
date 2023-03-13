@@ -13,11 +13,11 @@ const firebaseConfig = {
   authDomain: 'travellx-6002b.firebaseapp.com',
   projectId: 'travellx-6002b',
   storageBucket: 'travellx-6002b.appspot.com',
-  messagingSenderId: "312558156617",
+  messagingSenderId: '312558156617',
   appId: '1:312558156617:web:6aa5e8c6baca86c7147898',
   measurementId: 'G-8R7R4ND7HK',
 };
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);  // constante que usaré para autenticar usuarios
+export const auth = getAuth(app); // constante que usaré para autenticar usuarios
 export const db = getFirestore(app); // para que ejecute getfirestore
