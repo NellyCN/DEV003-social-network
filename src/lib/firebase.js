@@ -18,13 +18,15 @@ export const createUserEmail = (userName, email, password) => {
       updateProfile(auth.currentUser, {
         displayName: userName,
       });
-      console.log('usuario', user);
+      // console.log('usuario', user);
+      return user;
     })
     .catch(() => {
       // const errorCode = error.code;
       // const errorMessage = error.message;
       // ..
     });
+  return createUserEmail;
 };
 
 // **** LOGUEO CON EMAIL Y PASSWORD ****
@@ -44,7 +46,7 @@ export const createPost = async (user, comment) => {
     date: `${new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`,
     comment,
   });
-  console.log('Document written with ID: ', documentReference.id);
+  return documentReference.id;
 };
 
 // **** TRAE LOS POSTS DE FIRESTORE ****
