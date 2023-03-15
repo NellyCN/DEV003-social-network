@@ -48,12 +48,12 @@
         border-style: outset;
     }
 
-    .containerPic {
+    /* .containerPic {
         background-image: url(Imagenes/Viajera.jpg);
         background-size: cover;
         width: 50%;
         margin: 0 0px 0 0px;
-    }
+    } */
 }
 
 /* DESKTOP VERSION */
