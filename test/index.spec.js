@@ -13,9 +13,7 @@ import { createPost, createUserEmail } from '../src/lib/firebase';
 //   });
 // });
 
-// TEST CREATEUSEREMAIL FUNCTION
-
-// TEST CREATEPOST FUNCTION
+// TEST CREATEUSEREMAIL y CREATEPOST FUNCTION
 
 jest.mock('../src/lib/firebase', () => ({
   createPost: jest.fn((user, comment) => (`${user} id${comment}`)),
