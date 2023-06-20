@@ -16,7 +16,7 @@ font-family: Helvetica;
  --background-color-buttons-hover: #219ebc;
 }
 
-/* vista login */
+/* ------------vista login------------ */
 body {
     background-color: var(--theme-color);
     color: var(--primary-color);
@@ -43,15 +43,11 @@ body {
 }
 
 .controls {
-    /* border-color: #023047; */
     border-radius: 10px;
     height: 40px;
     width: 100%;
-    /* margin: 0 auto; */
     padding-left: 14px;
     margin-bottom: 8px;
-    /* margin-left: 28px;
-    margin-right: 28px; */
     border-color: var(--primary-color);
 }
 
@@ -60,7 +56,7 @@ body {
     height: 42px;
     width: 100%;
     background-color: var(--primary-color);
-    color: #ffff;
+    color: var(--theme-color);
     font-size: 14px;
     border-radius: 10px;
     border: 2px solid;
@@ -68,15 +64,16 @@ body {
 
 .loginBtn:hover{
     background: var(--background-color-buttons-hover);
-
 }
+
+/* -----------vista register------------ */
 
 .linkViewRegister {
         display: block;
         height: 42px;
         width: 100%;
         background-color: var(--background-color-buttons);
-        color: #ffff;
+        color: var(--theme-color);
         font-size: 14px;
         border-radius: 10px;
         border-color: #000;
@@ -95,7 +92,7 @@ body {
     height: 42px;
     width: 100%;
     background-color: var(--primary-color);
-    color: #ffff;
+    color:  var(--theme-color);
     font-size: 14px;
     border-color: #000;
     border-radius: 10px;
@@ -118,27 +115,37 @@ p {
     font-size: 14px;
 }
 
+/* -----------vista wall------------ */
+
 .headerWall{
     width: 100%;
     display: flex;
     justify-content: space-between ;
-    border-bottom: #219ebc;
+    border-bottom:  var(--background-color-buttons-hover);
     border-bottom-style: solid;
     border-width: thin;
     background-color: #B9D7E5;
 }
+
+.bodyWall {
+    background-color: var(--background-view);
+    width: 100%;
+    height: 100%;
+    }
+    
 main {
     display: flex;
     flex-direction: column ;
     width: 480px;
     position: absolute;
     padding: 0 20px;
-    border: 1px solid #219ebc;
+    border: 1px solid  var(--background-color-buttons-hover);
+    background-color: var(--theme-color);
     border-radius: 5px;
     top: 100%;
     transform: translate(-50%);
     left: 50%;
-
+    margin: 0px 20px;
 }
 
 .background {
@@ -154,9 +161,9 @@ main {
 .backgroundMuro {
     background-color: var(--theme-color);
     width: 100%;
-    /* margin: auto; */
-    border-left-color: #8ecae6;
-    border-right-color: #8ecae6;
+
+    border-left-color: var(--background-view);
+    border-right-color: var(--background-view);
 
 }
 
@@ -174,7 +181,7 @@ main {
     cursor: pointer;
     margin-top: 14px;
     margin-right: 14px;
-    box-shadow: 0.8px 1.5px 2px #219EBC;
+    box-shadow: 0.8px 1.5px 2px  var(--background-color-buttons-hover);
     
 }
 .logoutWall:hover {
@@ -182,14 +189,14 @@ background: var(--background-color-buttons-hover);
 }
 
 .userName{
-    width: 100%;
+    width: 92.5%;
     height: 25px;
     font-size: 0.9em;
-    margin: 0.8em;
+    margin: 0.5em 1.1em 0.5em;
     padding-left: 10px;
     border-radius: 5px;
     border-color: var(--background-color-buttons-hover);
-    box-shadow: none;
+    /* box-shadow: none; */
 }
 
 .userWellcome {
@@ -212,36 +219,25 @@ background: var(--background-color-buttons-hover);
     height: 40x;
 }
 
-.form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
 .newPost {
+    width: 98%;
     display: flex;
     flex-direction: column;
     background-color: var(--theme-color);
-    margin: 5px 50px 10px 50px;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    margin: 5px 5px 5px 5px;;
+    padding: 10px 10px 10px;
     border-color: var(--background-view);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 3px 4px rgba(2, 48, 71, 0.5));
     border-radius: 5px;
     
 }
 
 .textPost {
     border-radius: 5px;
-    height: 83px;
+    height: 120px;
     /* width: 98%; */
     font-size: 1.0em;
-    margin: 1.0rem;
+    margin: 0.5rem 1rem;
     border-color: var(--background-color-buttons-hover);
     padding: 10px 10px 10px 10px;
     overflow: hidden;
@@ -252,9 +248,14 @@ background: var(--background-color-buttons-hover);
     resize: none; /*remove the resize handle on the bottom right*/
 }
 
+.postContainer{
+margin-bottom: 20px;
+}
+
 .btnpost{
     display: flex;
     justify-content: right;
+    margin-right: 10px;
 }
 
 .postBtn {
@@ -270,7 +271,7 @@ background: var(--background-color-buttons-hover);
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    margin-top: 14px;
+    margin: 5px;
     box-shadow: 0.8px 1.5px 2px #B9D7E5;
 }
 
@@ -305,23 +306,22 @@ background: var(--primary-color);
 }
 
 .templatePosts {
-    /* display: flex; */
     border-style: solid;
     border-width: thin;
-    border-left-color: #8ecae6;
-    border-right-color: #8ecae6;
-    border-top: #ffffff;
+    border-left-color: var(--background-view);
+    border-right-color: var(--background-view);
+    border-top: var(--theme-color);
 }
 
 .templatePost {
     /* display: flex; */
     background-color: var(--theme-color);
     margin: 5px 30px 10px 30px;
-    padding: 10px;
+    padding: 5px 10px 20px;
     border-color: var(--background-view);
-    border-top: #219ebc;
+    border-top:  var(--background-color-buttons-hover);
     border-top-style: solid;
-    border-bottom: #219ebc;
+    border-bottom:  var(--background-color-buttons-hover);
     border-bottom-style: solid;
     border-width: thin;
 }

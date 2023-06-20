@@ -17,26 +17,28 @@ export default () => {
                 <button type="button" class="logoutWall" id ="logoutBtn">Log Out</button>
             </div>
         </header>
-        <main>
-            <section class="wallTemplate">
-                <div class="userWellcome">
-                            <label class="userName">HOLA,</label>
-                            <p class ="userEmailWellcome" type="text"></p> 
-                </div>
-                <form class="createPost" id="idcreatePost">
-                    
-                    <div class="newPost" id="newPost">
-                        <input type="text" class="userName" id="iduserName" placeholder="User Name">
-                        <textarea class="textPost" id="idtextPost" name="textarea" rows="5" cols="40" placeholder="Comparte aquí tus experiencias..."></textarea>
-                        <div class="btnpost">    
-                            <button type="button" class="postBtn" id="idCreateBtn">PUBLICAR</button>
-                        </div>
-                    </div>
-                </form>
-            </section>
-            <section class ="showPostCreated" id="showPostCreated">
-            </section>
-        </main>
+        <section class="bodyWall"> 
+          <main>
+              <section class="wallTemplate">
+                  <div class="userWellcome">
+                              <label class="userName">HOLA!</label>
+                              <p class ="userEmailWellcome" type="text"></p> 
+                  </div>
+                  <form class="createPost" id="idcreatePost">
+                      
+                      <div class="newPost" id="newPost">
+                          <input type="text" class="userName" id="iduserName" placeholder="User Name">
+                          <textarea class="textPost" id="idtextPost" name="textarea" rows="5" cols="40" placeholder="Comparte aquí tus experiencias..."></textarea>
+                          <div class="btnpost">    
+                              <button type="button" class="postBtn" id="idCreateBtn">PUBLICAR</button>
+                          </div>
+                      </div>
+                  </form>
+              </section>
+              <section class ="showPostCreated" id="showPostCreated">
+              </section>
+          </main>
+        </section>
     </div>          
     </section>          
     `;
@@ -52,14 +54,14 @@ export default () => {
       // console.log(doc.id);
       html += `
             <div class="templatePost">
-                <div>
-                    <h3 class="userName" id="iduserName" type="text">${dataPost.user}</h3>
-                    <h3 class="userName" id="iduserName" type="text">${dataPost.date}</h3>
-                    <p class="createdPost" id="idcreatedPost" type="text">${dataPost.comment}</p>
+                <div class="postContainer">
+                    <h3 class="userName" id="idUserName" type="text">${dataPost.user}</h3>
+                    <h3 class="userName" id="idUserName" type="text">${dataPost.date}</h3>
+                    <p class="createdPost" id="idCreatedPost" type="text">${dataPost.comment}</p>
                 </div>
                 <div class="buttonsEdit">
-                    <button type="button" class="editBtn" id="ideditBtn" data-id="${post.id}">EDITAR</button>
-                    
+                    <button type="button" class="editBtn" id="idEditBtn" data-id="${post.id}">EDITAR</button>
+                    <button type="button" class="likeBtn" id="idLikeBtn" data-id="${post.id}">LIKE</button>
                     <button type="button" class="deleteBtn" id="idDeleteBtn" data-id="${post.id}">ELIMINAR</button>
                 </div>
             </div>    
