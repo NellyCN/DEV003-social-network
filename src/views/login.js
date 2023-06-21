@@ -8,7 +8,7 @@ export default () => {
         <div class = "containerBackground">
             <div class ="background">
               <figure class="logo">
-                  <img class="logoTravellx" src="/Imagenes/TravellxLogo.png" alt="logoTravellx">
+                  <img class="logoTravellx" src="/Imagenes/travellxlogo.png" alt="logoTravellx">
               </figure>
               <form class="loginForm" id="idloginForm">
                 <p class="wellcomeLogReg">Conéctate con viajeros, comparte experiencias, recomienda lugares a otros viajeros como tú</p>
