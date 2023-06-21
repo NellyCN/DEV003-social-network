@@ -12,7 +12,7 @@ export default () => {
         <header>
              <div class="headerWall"
                 <figure>
-                    <img class="logoTravellxWall" src="/Imagenes/titleLogoTravellx.png" alt="logoTravellx">
+                    <img class="logoTravellxWall" src="/Imagenes/TravellxLogo.png" alt="logoTravellx">
                 </figure>
                 <button type="button" class="logoutWall" id ="logoutBtn">Log Out</button>
             </div>
