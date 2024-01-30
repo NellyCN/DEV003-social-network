@@ -8,7 +8,9 @@
 - [4. Prototipo de Baja Fidelidad](#4-prototipo-de-baja-fidelidad)
 - [5. Prototipo de Alta Fidelidad](#5-prototipo-de-alta-fidelidad)
 - [6. Historias de Usuario](#6-Historias-de-Usuario)
-- [7. Test de Usabilidad](#7-test-de-usabilidad)
+- [7. Acceso al proyecto](#7-Acceso-al-proyecto)
+- [8. Tecnologías utilizadas](#8-Tecnologías-utilizadas)
+- [9. Personas-Desarrolladores del Proyecto](#9-Personas-Desarrolladores-del-Proyecto)
 
 ----
 ## 1. Objetivo del proyecto
@@ -91,20 +93,18 @@ __Yo como__ usuario/a viajer@ __quiero poder__ ver sugerencias de lugares de otr
 
 - Los usuario/as tienen un botón "like" en cada post para darle like si te gustò el post y quisieras interactuar de esa manera con l@s otr@s usuaios/as.
 
-## 7. Test de Usabilidad
-
-## 8. 💻 Acceso al proyecto:
+## 7. 💻 Acceso al proyecto:
 
 Visita mi app **"TRAVELLX"** desde el dispositivo de tu preferencia, ya que es responsive, por lo cual le permitirá usarla en su móvil, tablet o Computador escritorio.
 
 Puedes visitarla y probarla, aquí: [Red Social - TRAVELLX](https://travellxapp.netlify.app/)
 
-## 9. 🛠️ Tecnologías utilizadas:
+## 8. 🛠️ Tecnologías utilizadas:
 
 La lógica del proyecto se implementó completamente en **Vanilla JavaScript** puro o **Vanilla JS (ES6+)**, **HTML semántico** y **CSS**. Se empleó **Firebase** y **Firestore** como servicio externo para la persistencia de datos y autenticación de los usuarios.
 
 La app se desplegó en **_Netlify_**. Te invito a visitarla y conocerla aquí, [Red Social - "TRAVELLX"](https://travellxapp.netlify.app/)
 
-## 10. 👩 Personas-Desarrolladores del Proyecto
+## 9. 👩 Personas-Desarrolladores del Proyecto
 
 * **Nelly Cumpa** - *Trabajo Inicial, Desarrollo y Despliegue* - [NellyCN](https://github.com/NellyCN)
