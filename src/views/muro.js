@@ -12,7 +12,7 @@ export default () => {
         <header>
              <div class="headerWall"
                 <figure>
-                    <img class="logoTravellxWall" src="/Imagenes/travellx.png" alt="logoTravellx">
+                    <img class="logoTravellxWall" src="/assets/travellx.png" alt="logoTravellx">
                 </figure>
                 <button type="button" class="logoutWall" id ="logoutBtn">Log Out</button>
             </div>
@@ -61,7 +61,7 @@ export default () => {
                 </div>
                 <div class="buttonsEdit">
                     <button type="button" class="editBtn" id="idEditBtn" data-id="${post.id}">EDITAR</button>
-                    <button type="button" class="likeBtn" id="idLikeBtn" data-id="${post.id}">LIKE</button>
+                    <button type="button" class="likeBtn" id="idLikeBtn" data-id="${post.id}"></button>
                     <button type="button" class="deleteBtn" id="idDeleteBtn" data-id="${post.id}">ELIMINAR</button>
                 </div>
             </div>    

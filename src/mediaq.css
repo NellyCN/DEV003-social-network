@@ -1,87 +1,124 @@
 /* MÓVIL VERSION */
 @media screen and (max-width: 480px) {
-
-    .containerBackground {
-        /* vertical-align: middle; */
-        /* vertical-align: middle; */
-        border-left: 2px var(--secundary-color);
-        position: relative;
+    .headerWall {
+      width: 112%;
+      display: flex;
+      justify-content: space-between;
     }
-
+    .logoutWall {
+      margin-right: 40px;
+    }
+  
+    .userWellcome {
+      width: 75%;
+      padding-left: 50px;
+    }
+  
+    .userName {
+      width: 94%;
+      margin: 0.5em 0.5em;
+      display: flex;
+      padding-left: 10px;
+    }
+  
+    .bodyWall {
+      width: 112%;
+      display: flex;
+      background-position: center;
+    }
+  
     main {
-        width: 90%;
+      width: 300px;
+      display: flex;
+      margin: 10px;
     }
-
-    .background {
-        width: 100%;
-        height: 508px;
-        position: absolute;
-        /* top: 50%; */
+  
+    .createPost {
+      width: 94%;
+      justify-content: center;
+      display: flex;
+      align-items: center;
     }
-}
-
-/* TABLET VERSION */
-@media screen and (min-width: 767px) {
-    .container {
-        margin: 70px 20px;
-        display: flex;
-        flex-direction: row;
-        background-image: none;
+    .newPost {
+      width: 78%;
+      justify-content: center;
     }
-
+  
     .containerBackground {
-        margin: 10px 0px 10px 0px;
-        width: 50%;
-        height: 50%;
-        justify-content: center;
-        padding: 5px;
-        border-left: 2px var(--secundary-color);
-        border-left-style: groove;
+      margin-top: 70px;
+      border-left: 2px var(--secundary-color);
+      position: relative;
     }
-
+  
     .background {
-        background-color: var(--theme-color);
-        width: 336px;
-        padding-top: 15px;
-        padding-bottom: 40px;
-        text-align: center;
-        border-style: outset;
+      width: 360px;
+      height: 508px;
+      position: absolute;
     }
-
-    /* .containerPic {
-        background-image: url(Imagenes/Viajera.jpg);
-        background-size: cover;
-        width: 50%;
-        margin: 0 0px 0 0px;
-    } */
-}
-
-/* DESKTOP VERSION */
-@media screen and (min-width: 950px) {
+  }
+  
+  /* TABLET VERSION */
+  @media screen and (min-width: 767px) {
     .container {
-        margin: 70px;
-        display: flex;
-        flex-direction: row;
-        background-image: none;
+      display: flex;
+      flex-direction: row;
+      background-image: none;
+      justify-content: center;
     }
-
+    .logoutWall {
+      margin-right: 40px;
+    }
+  
     .containerBackground {
-        margin: 10px 80px 10px 80px;
-        width: 50%;
-        height: 50%;
-        /* justify-content: center; */
-        /* padding: 5px; */
-        border-left: 2px var(--secundary-color);
-        border-left-style: groove;
+      margin: 70px 2px;
+      border-left: 2px var(--secundary-color);
+      border-left-style: groove;
     }
-
+  
+    .background {
+      background-color: var(--theme-color);
+      width: 360px;
+      height: 508px;
+      padding-top: 15px;
+      padding-bottom: 40px;
+      text-align: center;
+      border-style: outset;
+    }
+  }
+  
+  /* DESKTOP VERSION */
+  @media screen and (min-width: 950px) {
+    .wallTemplate {
+      width: 100%;
+    }
+  
+    main {
+      width: 750px;
+    }
+  
+    .container {
+      margin: 70px;
+      display: flex;
+      flex-direction: row;
+      background-image: none;
+    }
+  
+    .containerBackground {
+      margin: 10px;
+      border-left: 2px var(--secundary-color);
+      border-left-style: groove;
+    }
+  
+    .background {
+      margin-left: 120px;
+      width: 360px;
+      height: 508px;
+    }
+  
     .containerPic {
-        background-image: url(Imagenes/Viajera.jpg);
-        background-size: cover;
-        width: 30%;
-        margin: 0 150px 0 150px;
-
+      background-image: url(/assets/Viajera.718d166a.jpg);
+      background-size: cover;
+      width: 30%;
+      margin: 0 150px 0 150px;
     }
-
-
-}
+  }
